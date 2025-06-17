@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graphic Design</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/table.css') }}"
+    />
+
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+      type="image/png"
+    />
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <nav>
+      <img
+        src="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+        alt="IPMC University College Logo"
+        width="120"
+      />
+
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <div class="nav-links" id="nav-links">
+       <a href="{{ url_for('index') }}">Home</a>
+
+        <div class="nav-item">
+         
+
+        </div>
+        <a href="#">Submit Project</a>
+      </div>
+    </nav>
+
+ <button onclick="window.location.href='{{ url_for('dashboard') }}'" id="backBtn" class="nav-btn">&#8592;</button>
+
+    <table>
+      <caption>
+        Graphic Design (2nd Sem)
+      </caption>
+      <thead>
+        <tr>
+          <th>MODULE</th>
+          <th>BOOK <br /><span>(Click to download from library)</span></th>
+          <th>PROJECT</th>
+          <th>SUBMIT</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Adobe XD</td>
+          <td>
+            <a href="{{url_for('library_graphic')}}"
+              ><img
+                src="{{ url_for('static', filename='images/adobeXD.png') }}"
+                alt="Adobe XD"
+                width="70"
+            /></a>
+          </td>
+          <td>
+            Build a frontend and backend project in Python <br />using Django
+            and React
+            <span> Deadline: June 20, 2025</span>
+          </td>
+          <td class="arrow">&#8594;</td>
+        </tr>
+
+        <tr>
+          <td>Adobe Illustrator</td>
+          <td>
+            <a href="{{url_for('library_graphic')}}"
+              ><img
+                src="{{ url_for('static', filename='images/adobe-illustrator.png') }}"
+                alt="Adobe Illustrator"
+                width="30"
+            /></a>
+          </td>
+          <td>
+            Build a frontend and backend project in Python <br />using Django
+            and React
+            <span> Deadline: May 23, 2025</span>
+          </td>
+          <td class="arrow">&#8594;</td>
+        </tr>
+
+        <tr>
+          <td>Bootstrap</td>
+          <td>
+            <a href="{{url_for('library_graphic')}}"
+              ><img
+                src="{{ url_for('static', filename='images/boostrap.jpeg') }}"
+                alt="Bootstrap"
+                width="30"
+            /></a>
+          </td>
+          <td>
+            Build a frontend and backend project in Python <br />using Django
+            and React
+            <span> Deadline: June 20, 2025</span>
+          </td>
+          <td class="arrow">&#8594;</td>
+        </tr>
+
+        <tr>
+          <td>Basic Python</td>
+          <td>
+            <a href="{{url_for('library_graphic')}}"
+              ><img
+                src="{{ url_for('static', filename='images/python-beginners-removebg-preview.png') }}"
+                alt="Basic Python"
+                width="30"
+            /></a>
+          </td>
+          <td>
+            Build a frontend and backend project in Python <br />using Django
+            and React
+            <span> Deadline: June 20, 2025</span>
+          </td>
+          <td class="arrow">&#8594;</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

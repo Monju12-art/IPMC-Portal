@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPMC University College</title>
+
+    <!-- Corrected CSS Link -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css')}}"
+    />
+
+    <!-- Corrected Favicon -->
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+      type="image/png"
+    />
+
+    <!-- Font Awesome -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/cdb2f161c6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- ✅ Updated Navbar with dropdown and mobile toggle -->
+    <nav>
+      <img
+        src="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+        alt="IPMC Logo"
+        width="120px"
+      />
+
+      <div class="logo">
+        <span class="ipmc">IPMC</span>
+        <span class="college">UNIVERSITY COLLEGE</span>
+      </div>
+
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <div class="nav-links" id="nav-links">
+        <a href="{{ url_for('index') }}">Home</a>
+
+        <a href="#">Achievements</a>
+
+        <div class="nav-item">
+          <a href="{{ url_for('courses') }}">Courses▾</a>
+
+<div class="dropdown">
+  <a href="{{ url_for('courses') }}#software">Software Engineering</a>
+   <a href="{{ url_for('courses') }}#database">Database Management</a>
+     <a href="{{ url_for('courses') }}#system">System Engineering</a>
+    <a href="{{ url_for('courses') }}#graphic"> Graphic Design</a>
+</div>
+
+        </div>
+        <div class="login-items">
+          <a href="#">Login▾</a>
+          <div class="dropup">
+            <a href="{{ url_for('loginstu') }}">Student</a>
+            <a href="{{ url_for('loginstaff') }}">Staff</a>
+          </div>
+        </div>
+
+        <a href="#contact">Contact</a>
+        <a href="{{ url_for('register') }}">Register</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="her" id="her">
+      <div class="her-slider">
+        <!-- Slide 1 -->
+        <div class="her-slide">
+          <div class="her-left">
+            <div class="her-text">
+              <p>Introducing</p>
+              <h4>Advanced Diploma in</h4>
+              <h2>Software Engineering</h2>
+              <div class="btn-wrapper">
+                <a href="#" class="btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="her-right">
+            <img
+              src="{{ url_for('static', filename='images/gy.webp') }}"
+              alt="Student 1"
+            />
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="her-slide">
+          <div class="her-left">
+            <div class="her-text">
+              <h4>Unlock Opportunities</h4>
+              <h2>Advance Your <span>Career</span></h2>
+              <div class="btn-wrapper">
+                <a href="#" class="btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="her-right">
+            <img
+              src="{{ url_for('static', filename='images/ipmc-header6.avif') }}"
+              alt="IPMC Header"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <div class="add">
+      <h6 id="advantage">The IPMC Advantage</h6>
+      <div class="write-up">
+        <ul>
+          <li>
+            IPMC is Ghana's leading IT Training Institution, with over 2 million
+            professionals trained in the last 3 decades.
+          </li>
+          <li>
+            Our brand is synonymous with excellence in the field and has
+            consistently been the first choice for career advancement.
+          </li>
+          <li>
+            We work closely with over 500 industry experts, ensuring you gain
+            access to a wealth of rich and industry-relevant knowledge.
+          </li>
+          <li>
+            IPMC is Accredited by both the Ghana Tertiary Education Commission
+            (GTEC) and the National Accreditation Board (NAB) for NCC Education,
+            Diploma and Advanced Diploma courses.
+          </li>
+          <li>
+            Accredited and recognized as a training organization, partner,
+            education provider and examination centre by globally renowned
+            institutions such as: NCC, University of Greenwich, CompTIA, Pearson
+            VUE, Prometric.
+          </li>
+          <li>
+            IPMC has received notable recognition over the years, including
+            awards from the Ghana Investment Promotion Council for remarkable
+            contributions to educating Ghana’s workforce.
+          </li>
+          <li>
+            IPMC Graduates have proven themselves again and again with their
+            adept practical skills. Employers know that getting IPMC graduates
+            on board is a strategic investment that yields substantial returns.
+          </li>
+          <li>
+            Today, IPMC Graduates work for businesses in Africa, Asia, Europe,
+            North America and beyond. An association with IPMC makes you part of
+            a global network of accomplished professionals, positioning you to
+            thrive in diverse industries and cultural landscapes.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Facts Section -->
+    <section class="facts">
+      <div class="facts-container">
+        <div class="courses">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <h3>2000000+</h3>
+          <p>2million+ Students</p>
+        </div>
+        <div class="courses">
+          <i class="fa-solid fa-book"></i>
+          <h3>30000</h3>
+          <p>30k+ Courses</p>
+        </div>
+        <div class="courses">
+          <i class="fa-solid fa-location-dot"></i>
+          <h3>15</h3>
+          <p>Centers Locations</p>
+        </div>
+        <div class="courses">
+          <i class="fa-solid fa-earth-africa"></i>
+          <h3>7</h3>
+          <p>Countries Globally</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="office">
+          <h5>Our Office</h5>
+          <div class="loca">
+            <p>
+              <i class="fa-solid fa-location-dot"></i> IPMC Technology center,
+              Kasoa Ghana.
+            </p>
+            <p><i class="fa-solid fa-phone-volume"></i> +233 (0) 245-164-677</p>
+            <p><i class="fa-solid fa-envelope"></i> training@ipmcghana.com</p>
+          </div>
+        </div>
+
+        <div class="programmes">
+          <h5>Courses</h5>
+          <a href="{{ url_for('courses') }}#database">Database Management</a>
+          <a href="{{url_for('courses')}}#graphic">Graphic Design</a>
+          <a href="{{url_for('courses')}} #system">System Engineering</a>
+          <a href="{{ url_for('courses') }}#software">Software Engineering</a>
+        </div>
+
+        <div class="quick-links">
+          <h5>Quick Links</h5>
+          <a href="{{ url_for('index') }}">Home</a>
+
+          <a href="#">Our-Story</a>
+          <a href="#">Courses</a>
+          <a href="#">Login</a>
+          <a href="{{ url_for('register') }}">Register</a>
+
+          <a href="#" id="contact">Contact</a>
+        </div>
+      </div>
+      <p id="copyright">Copyright © 2023 IPMC Kasoa, All Right Reserved.</p>
+    </footer>
+
+    <script>
+      // Toggle nav for mobile
+      const toggle = document.getElementById("menu-toggle");
+      const links = document.getElementById("nav-links");
+      toggle.addEventListener("click", () => {
+        links.classList.toggle("active");
+      });
+
+      // Slider logic
+      const her = document.getElementById("her");
+      const herSlider = her.querySelector(".her-slider");
+      const herSlides = her.querySelectorAll(".her-slide");
+      let herCurrent = 0;
+
+      setInterval(() => {
+        herCurrent = (herCurrent + 1) % herSlides.length;
+        herSlider.style.transform = `translateX(-${herCurrent * 100}%)`;
+      }, 4000);
+    </script>
+  </body>
+</html>

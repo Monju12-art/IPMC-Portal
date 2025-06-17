@@ -1,0 +1,49 @@
+<!-- filepath: c:\Users\user\Desktop\Projects\SCHOOL PORTAL\Student-Portal\templates\software_results.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Software Engineering Results</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename= 'css/s.e. batch8-10am.css')}}"
+    />
+
+     <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+      type="image/png"
+    />
+  </head>
+  <body>
+    <button
+      onclick="window.location.href='{{ url_for('staff_dashboard') }}'"
+      id="backBtn"
+      class="nav-btn"
+    >
+      &#8592;
+    </button>
+
+    <h1>Software Engineering Results</h1>
+    {% for module in module_results %}
+   <h2 style="text-align:center;">{{ module.module }}</h2>
+    <table border="1">
+      <tr>
+        <th>Index Num</th>
+        <th>Name</th>
+        <th>Module</th>
+        <th>Grade</th>
+      </tr>
+      {% for index_number, name, grade in module.grades %}
+      <tr>
+        <td>{{ index_number }}</td>
+        <td>{{ name }}</td>
+        <td>{{ module.module }}</td>
+        <td>{{ grade if grade else 'N/A' }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <br />
+    {% endfor %}
+  </body>
+</html>

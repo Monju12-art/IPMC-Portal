@@ -1,0 +1,43 @@
+<!-- filepath: c:\Users\user\Desktop\Projects\SCHOOL PORTAL\Student-Portal\templates\staff_dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Staff Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/staff_dashboard.css') }}"
+    />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+      type="image/png"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome, {{ name }}!</h1>
+      <nav>
+       <a href="{{ url_for('manage_students') }}">Manage Students</a>
+       
+       <a href="{{ url_for('library') }}">Library</a>
+        <a href="{{url_for('staff_profile')}}">Profile</a>
+        <a href="{{ url_for('index') }}">Logout</a>
+      </nav>
+    </header>
+
+    <section class="overview">
+      <h2>Overview</h2>
+      <p>Number of students: <span>{{ num_students }}</span></p>
+      <p>Number of courses: <span>{{ num_courses }}</span></p>
+    </section>
+
+    <section class="actions">
+      <h2>Quick Actions</h2>
+     
+    <button onclick="location.href='/staff/software-results'">
+    View Software Engineering Results
+  </button>
+    </section>
+  </body>
+</html>

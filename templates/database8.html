@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Database Technology</title>
+  
+  <!-- Use only one CSS link, prefer Flask url_for if Flask is used -->
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}">
+
+  
+  <link
+    rel="icon"
+    href="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+    type="image/png"
+  />
+</head>
+
+<body>
+
+ <button onclick="window.location.href='{{ url_for('dashboard') }}'" id="backBtn" class="nav-btn">&#8592;</button>
+
+  <!-- Navbar -->
+  <nav>
+    <img
+      src="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+      alt="IPMC University College Logo"
+      width="120"
+    />
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <div class="nav-links" id="nav-links">
+      <a href="{{ url_for('index') }}">Home</a>
+
+      <div class="nav-item">
+        <a href="{{ url_for('library') }}">Library▾</a>
+        <div class="dropdown">
+          <a href="#">Software Engineering</a>
+          <a href="#">System Engineering</a>
+          <a href="#">Graphic Design</a>
+          <a href="#">Database Management</a>
+        </div>
+      </div>
+
+      <div class="login-items">
+        <a href="#">Announcements▾</a>
+        <div class="dropup">
+          <a href="#">Exams Time Table</a>
+          <a href="#">Resits</a>
+          <a href="#">Holidays</a>
+        </div>
+      </div>
+
+      <a href="#">Submit Project</a>
+    </div>
+  </nav>
+
+  <!-- Main table -->
+  <table>
+    <caption>DATABASE TECHNOLOGY (1st Sem)</caption>
+    <thead>
+      <tr>
+        <th>MODULE</th>
+        <th>BOOK <br /> <span>(Click to download from library)</span></th>
+        <th>PROJECT</th>
+        <th>SUBMIT</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>The Windows O.S</td>
+        <td>
+          <a href="#"><img src="{{ url_for('static', filename='images/window operation system.jpg') }}" alt="Windows OS" width="30" /></a>
+        </td>
+        <td>
+          Build a frontend and backend project in Python using Django and React
+          <br /><span>Deadline: June 20, 2025</span>
+        </td>
+        <td class="arrow">&#8594;</td>
+      </tr>
+
+      <tr>
+        <td>Database Concept</td>
+        <td>
+          <a href="#"><img src="{{ url_for('static', filename='images/Database-concept.jpg') }}" alt="Database Concept" width="30" /></a>
+        </td>
+        <td>
+          Build a frontend and backend project in Python using Django and React
+          <br /><span>Deadline: May 23, 2025</span>
+        </td>
+        <td class="arrow">&#8594;</td>
+      </tr>
+
+      <tr>
+        <td>Database Model</td>
+        <td>
+          <a href="#"><img src="{{ url_for('static', filename='images/Data model.jpg') }}" alt="Database Model" width="30" /></a>
+        </td>
+        <td>
+          Build a frontend and backend project in Python using Django and React
+          <br /><span>Deadline: June 20, 2025</span>
+        </td>
+        <td class="arrow">&#8594;</td>
+      </tr>
+
+      <tr>
+        <td>Basic Python</td>
+        <td>
+          <a href="#"><img src="{{ url_for('static', filename='images/python-beginners-removebg-preview.png') }}" alt="Basic Python" width="30" /></a>
+        </td>
+        <td>
+          Build a frontend and backend project in Python using Django and React
+          <br /><span>Deadline: June 20, 2025</span>
+        </td>
+        <td class="arrow">&#8594;</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

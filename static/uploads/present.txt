@@ -1,0 +1,39 @@
+    https://www.canva.com/design/DAGbn5S1XOs/gKy-n8iHJLCuaSdggTMAEQ/edit?utm_
+content=DAGbn5S1XOs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+
+
+//for cd for the school project.
+Perfect, Monju! Thanks for confirming your path:
+`C:\Users\user\Desktop\Projects\SCHOOL PORTAL\Student-Portal\app.py`
+
+---
+
+### ✅ Here's Exactly What To Do:
+
+1. **Open Command Prompt.**
+2. Copy and paste this **with quotes** to change directory:
+
+```bash
+cd "C:\Users\user\Desktop\Projects\SCHOOL PORTAL\Student-Portal"
+```
+
+3. Then run your Flask app with: 
+
+```bash
+python app.py
+```
+
+---
+
+### ✅ What You Should See After That:
+
+You’ll see something like:
+
+```
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+```
+
+Open that link in your browser and you’ll see your Flask app.
+
+Let me know if it works or if you see any error — I’ll walk you through it.

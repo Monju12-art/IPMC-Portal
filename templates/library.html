@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/library.css') }}"
+    />
+
+     <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+      type="image/png"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/cdb2f161c6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- nav -->
+    <nav>
+      <img
+        src="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+        alt="IPMC University College Logo"
+        width="120"
+        class="wee"
+      />
+
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <div class="nav-links" id="nav-links">
+        <a href="{{ url_for('index') }}">Home</a>
+          
+           
+       <a href="{{ url_for('exams_timetable') }}">Exams Time Table</a>
+       
+      </div>
+
+        <div class="search-bar">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for books..."
+          />
+        </div>
+      </div>
+    </nav>
+
+
+<!-- filepath: c:\Users\user\Desktop\Projects\SCHOOL PORTAL\Student-Portal\templates\library.html -->
+ 
+{% if books %}
+  <h2>Library</h2>
+  <div class="books">
+    {% for book in books %}
+      <div class="book">
+        <img src="{{ url_for('static', filename=book.image) }}" alt="{{ book.title }}" width="120">
+        <p>{{ book.title }}</p>
+        <small>
+          {% if book.course %}
+            {{ book.course|replace('_', ' ')|title }}
+          {% endif %}
+        </small>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+    <main>
+    
+      <!-- books -->
+
+      <!-- software engineering -->
+        
+      {% if course == 'software_engineering' or course == 'all'%}
+      <h2>SOFTWARE ENGINEERING</h2>
+      <div class="book-container">
+        <!-- sem 1 -->
+        <div class="book-card">
+          <img
+            src="{{ url_for ('static', filename= 'images/sad.webp')}}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>S.A.D</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src="{{ url_for('static', filename='images/csshtml.jpg')}}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>Html/Css</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src="{{ url_for('static', filename= 'images/sql.jpg')}}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>SQL</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src="{{ url_for('static', filename='images/c++.jpg')}}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>C++</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <!-- sem 2 -->
+
+        <div class="book-card">
+          <img
+            src="{{url_for ('static', filename= 'images/python-beginners-removebg-preview.png')}}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>Python</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <!-- java -->
+        <div class="book-card">
+          <img
+            src="{{ url_for('static', filename= 'images/java-book.jpg')}}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>Core Java</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <!-- java -->
+        <div class="book-card">
+          <img
+            src="{{url_for('static', filename='images/php-book.jpeg')}}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>PHP</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <!-- java -->
+        <div class="book-card">
+          <img
+            src="{{url_for('static', filename= 'images/cy-book.jpg')}}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>C#</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- system -->
+       
+      {% if course == 'system_engineering' or course == 'all' %}
+      <h2>SYSTEM ENGINEERING</h2>
+      <div class="book-container">
+        <!-- sem 1 -->
+        <div class="book-card">
+          <img
+            src="{{ url_for('static', filename= 'images/comptia a.png')}}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>CompTIA A+</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src="{{url_for('static', filename='images/n+.jpeg')}}"
+            alt="book"
+            class="book-pic"
+          />
+          <h3>CompTIA N+</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src="{{ url_for('static', filename='images/red-hat.jpeg')}}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>Linux Redhat Administration</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src="{{ url_for('static', filename='images/system en1.jpeg')}}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>System</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src="{{ url_for('static', filename='images/system 4.jpeg')}}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>Linux Redhat</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src="{{url_for('static', filename= 'images/system 5.jpg')}}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>Linux Redhat Administration</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src="{{ url_for('static', filename= 'images/system3.jpg')}}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>Linux Redhat Administration</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src="{{ url_for('static', filename= 'images/system 2.webp')}}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>Linux Redhat Administration</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- Graphic design -->
+      {% if course == 'graphic_design' or course == 'all'%}
+      <h2>GRAPHIC DESIGN</h2>
+      <div class="book-container">
+        <div class="book-card">
+          <img
+            src="{{url_for('static', filename= 'images/basic0principles.jpg')}}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>Basic Principles of Design</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src="{{ url_for('static', filename='images/adobe-illustrator.png') }}"
+            alt="Adobe Illustrator"
+            width="30"
+          />
+          <h3>Adobe Illustrator</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src="{{ url_for( 'static', filename='images/adobeXD.png') }}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>Adobe XD</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src="{{ url_for( 'static', filename= 'images/boostrap.jpeg')}}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>Bootstrap</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src=" {{ url_for('static',filename= 'images/dreamweaver.webp') }}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>Dream Weaver</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src=" {{ url_for ('static', filename= 'images/csshtml.jpg') }}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>Html/Css</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src=" {{ url_for('static', filename= 'images/js.jpg')}}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>Basic Javascript</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src="{{ url_for('static', filename= 'images/system 2.webp') }}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>Linux Redhat Administration</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- database -->
+      {% if course == 'database'  or course == 'all'%}
+      <h2>DATABASE TECHNOLOGY</h2>
+      <div class="book-container">
+        <div class="book-card">
+          <img
+            src=" {{ url_for('static', filename= 'images/window operation system.jpg') }}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>Windows Operating System</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src="{{ url_for('static', filename= 'images/Database-concept.jpg') }}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>Database Concept</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src=" {{ url_for('static', filename= 'images/Data model.jpg') }}"
+            alt="python"
+            class="book-pic"
+          />
+          <h3>Database Model</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src="{{ url_for('static', filename= 'images/sql.jpg') }}"
+            alt="python"
+            class="book-pic"
+          />
+          <h3>Sql server</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src=" {{ url_for ('static', filename= 'images/python-beginners-removebg-preview.png')}}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>Basic Python</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src="{{ url_for('static', filename= 'images/Oracle sql 12c.jpeg') }}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>Oracle SQL 12c</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src=" {{ url_for('static', filename= 'images/pro oracle 18.jpeg')}}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>Oracle 18c Admin1</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+
+        <div class="book-card">
+          <img
+            src="{{ url_for('static', filename= 'images/window operation system.jpg')}}"
+            alt="python-book"
+            class="book-pic"
+          />
+          <h3>Windows Operating System</h3>
+          <p>By Stephen Jelleh</p>
+          <a href="books/software101.pdf" download class="download-btn"
+            >Download PDF</a
+          >
+        </div>
+      </div>
+      {% endif %}
+    </main>
+
+    <!-- js -->
+    <script>
+   // Toggle nav for mobile
+      const toggle = document.getElementById("menu-toggle");
+      const links = document.getElementById("nav-links");
+      toggle.addEventListener("click", () => {
+        links.classList.toggle("active");
+      });
+
+
+
+      const searchInput = document.getElementById("searchInput");
+      const bookCards = document.querySelectorAll(".book-card"); // Change this to your actual class
+
+      searchInput.addEventListener("keyup", function () {
+        const query = this.value.toLowerCase();
+
+        bookCards.forEach((card) => {
+          const title = card.querySelector("h3").textContent.toLowerCase(); // Book title
+          const author = card.querySelector("p").textContent.toLowerCase(); // Author name
+
+          if (title.includes(query) || author.includes(query)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/register.css')}}">
+     <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+      type="image/png"
+    />
+    
+</head>
+<body>
+    
+
+<button onclick="window.location.href='{{ url_for('index') }}'" id="backBtn" class="nav-btn">&#8592;</button>
+
+<section class="container"> <section class="container">
+
+
+    <div class="me">
+        <h3> REGISTRATION FORM</h3>
+        <input type="text" placeholder="Full Name"  required>
+        <input type="text" placeholder="Phone Number">
+
+        <select name="#" id="" required> 
+            <option value="#">Education qualification</option>
+            <option value="#">WASSCE</option>
+             <option value="#">Bachelor's</option>
+              <option value="#">Polytechnic</option>
+            <option value="#"> J.H.S</option>
+            <option value="#">Diploma</option>
+            <option value="#"> Masters</option>
+            <option value="#">Any Other</option>
+            
+        </select>
+        <input type="text" placeholder="Your Email ">
+
+        <input type="text" placeholder="Your Address">
+        <!-- courses -->
+        <select name="
+        " id="">
+        <option value="#"> Select a course</option>
+         <option value="#"> Software Engineering</option>
+          <option value="#">Graphic Design</option>
+             <option value="#">System Engineering</option>
+              <option value="#">Database Administration</option>
+            
+    </select>
+
+     <button class="cta">Register</button>
+<div class="notification success">
+  Registration successful!
+</div>
+
+
+
+
+
+
+
+<script>
+document.querySelector('.cta').onclick = function(e) {
+  e.preventDefault(); // Prevent form submission or page reload
+  const notification = document.querySelector('.notification');
+  notification.classList.add('show');
+  setTimeout(() => {
+    notification.classList.remove('show');
+  }, 2000); // 3000ms = 3 seconds
+};
+
+
+//go back
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/student_dashboard.css') }}">
+
+
+ <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+      type="image/png"
+    />
+
+
+<div class="him"> 
+  <section class="head-dashboard"> 
+     <img src="{{ url_for('static', filename='profile_pics/' ~ profile_pic) }}"
+     alt="Profile"
+     class="profile-pic"
+     onerror="this.onerror=null;this.src='{{ url_for('static', filename='profile_pics/default.jpg') }}';">
+<h2> {{ student_name }}</h2>
+<p>Index Num: {{ student_index }}</p>
+</section>
+<!-- Your dynamic menu code using student_course -->
+
+
+<ul class="dashboard-menu">
+  <li>
+    {% if student_course == 'Software Engineering' %}
+      <a href="{{ url_for('grades_software') }}">📊 View Grades</a>
+    {% elif student_course == 'System Engineering' %}
+      <a href="{{ url_for('grades_system') }}">📊 View Grades</a>
+    {% elif student_course == 'Database Management' %}
+      <a href="{{ url_for('grades_database') }}">📊 View Grades</a>
+    {% elif student_course == 'Graphic Design' %}
+      <a href="{{ url_for('grades_graphic') }}">📊 View Grades</a>
+    {% else %}
+      <a href="#">📊 View Grades</a>
+    {% endif %}
+  </li>
+  <li>
+    {% if student_course == 'Software Engineering' %}
+      <a href="{{ url_for('modules_software') }}">📚 View Modules & Projects</a>
+  {% elif student_course == 'System Engineering' %}
+  <a href="{{ url_for('modules_system') }}">📚 View Modules & Projects</a>
+    {% elif student_course == 'Database Management' %}
+      <a href="{{ url_for('modules_database') }}">📚 View Modules & Projects</a>
+    {% elif student_course == 'Graphic Design' %}
+      <a href="{{ url_for('modules_graphic') }}">📚 View Modules & Projects</a>
+    {% else %}
+      <a href="#">📚 View Modules & Projects</a>
+    {% endif %}
+  </li>
+  <li>
+    {% if student_course == 'Software Engineering' %}
+      <a href="{{ url_for('library_software') }}">📝 View Library</a>
+    {% elif student_course == 'System Engineering' %}
+      <a href="{{ url_for('library_system') }}">📝 View Library</a>
+    {% elif student_course == 'Database Management' %}
+      <a href="{{ url_for('library_database') }}">📝 View Library</a>
+    {% elif student_course == 'Graphic Design' %}
+      <a href="{{ url_for('library_graphic') }}">📝 View Library</a>
+    {% else %}
+      <a href="#">📝 View Library</a>
+    {% endif %}
+  </li>
+</ul>
+
+
+<a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+
+
+  </div>
+
+
+
+

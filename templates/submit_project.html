@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submit Project</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/submit_project.css') }}">
+
+  <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+      type="image/png"
+    />
+
+
+</head>
+<body>
+  <h2>Submit Your Project</h2>
+  <!-- Success Popup -->
+  <div id="popup" class="popup">
+    <p>✅ Project submitted successfully!</p>
+  </div>
+
+  
+  <form method="POST" action="{{ url_for('submit_project') }}" enctype="multipart/form-data">
+    <label for="title">Module</label>
+    <input type="text" name="title" required>
+
+    <label for="description">Description</label>
+    <textarea name="description" required></textarea>
+
+    <label for="course">Course</label>
+    <select name="course" required>
+      <option value="software_engineering">Software Engineering</option>
+      <option value="graphic_design">Graphic Design</option>
+      <option value="graphic_design">System Engineering</option>
+      <option value="graphic_design">Database Administration</option>
+     
+    </select>
+
+    <label for="file">Upload Project File (PDF, ZIP, etc.)</label>
+    <input type="file" name="file" required>
+
+    <button type="submit">Submit Project</button>
+  </form>
+
+
+  <script>
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('submitted') === 'true') {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'block';
+
+    setTimeout(() => {
+      popup.style.display = 'none';
+    }, 4000);
+
+    // Clean up URL
+    history.replaceState(null, '', window.location.pathname);
+  }
+</script>
+
+</body>
+</html>

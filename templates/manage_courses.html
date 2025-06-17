@@ -1,0 +1,32 @@
+<!-- filepath: c:\Users\user\Desktop\Projects\SCHOOL PORTAL\Student-Portal\templates\manage_courses.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Manage Courses</title>
+ 
+<link rel="stylesheet" href="{{url_for('static', filename= 'css/s.e. batch8-10am.css')}}" >
+</head>
+<body>
+  <h1>Manage Courses</h1>
+  <a href="{{ url_for('add_course') }}" class="btn">Add New Course</a>
+  <table>
+    <tr>
+      <th>Course Code</th>
+      <th>Course Name</th>
+      <th>Actions</th>
+    </tr>
+    {% for course in courses %}
+   <tr>
+  <td>{{ course.code }}</td>
+  <td>{{ course.name }}</td>
+  <td>
+    <a href="{{ url_for('edit_course', course_code=course.code) }}">Edit</a>
+    <a href="{{ url_for('delete_course', course_code=course.code) }}">Delete</a>
+  </td>
+</tr>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

@@ -1,0 +1,58 @@
+
+<link rel="stylesheet" href="{{url_for('static', filename= 'css/s.e. batch8-10am.css')}}" >
+
+ <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+      type="image/png"
+    />
+
+
+<nav>
+     <img
+    src="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+    alt=""
+    width="120px"
+  />
+
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <div class="nav-links" id="nav-links">
+      <a href="{{ url_for('index') }}">Home</a>
+           
+      </div>
+    </nav>
+
+
+
+
+
+<table>
+  <caption> EXAMINATION TIMETABLE
+      </caption>
+  <thead>
+    <tr>
+      <th>Course</th>
+      <th>Batch Time</th>
+      <th>Module</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Required Balance</th>
+      <th>Invigilator</th>
+      <th>Resit Date (Next Friday)</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for exam in exams %}
+    <tr>
+      <td>{{ exam.Course }}</td>
+      <td>{{ exam["BATCH TIME"] }}</td>
+      <td>{{ exam.module }}</td>
+      <td>{{ exam.DATE }}</td>
+      <td>{{ exam.TIME }}</td>
+      <td>{{ exam["REQUIRED BALANCED"] }}</td>
+      <td>{{ exam.INVIGILATOR }}</td>
+      <td>{{ exam.resit }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/loginstu.css') }}"
+    />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+      type="image/png"
+    />
+  </head>
+  <body>
+
+    {% if error %}
+  <p style="color:red; text-align:center;">{{ error }}</p>
+{% endif %}
+
+  <button onclick="window.location.href='{{ url_for('index') }}'" id="backBtn" class="nav-btn">&#8592; </button>
+
+    <div class="container">
+      <div class="logo">
+        <img
+          src="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+          alt="IPMC Logo"
+          width="120"
+        />
+      </div>
+
+     <form class="me" id="loginForm" method="POST" action="{{ url_for('loginstu') }}">
+
+        <label for="indexNumber"> Index Number</label>
+        <input type="text" id="indexNumber" name="indexNumber" required />
+
+        <br />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+
+        <button type="submit" class="cta">Login</button>
+      </form>
+    </div>
+
+   
+<script>
+  function goback() {
+    window.history.back();
+  }
+</script>
+
+   
+  </body>
+</html>

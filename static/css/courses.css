@@ -1,0 +1,417 @@
+/* sarif font */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Fredericka+the+Great&family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --primary-color:gray;
+  --secondary-color: red;
+}
+
+
+nav {
+  background-color:gray;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0rem;
+  position: relative;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  /* display: none; */
+  z-index: 200;
+}
+
+.logo {
+  font-weight: bold;
+ /* margin-left: 3em; */
+ display: none;
+}
+
+.ipmc{
+  background-color: red;
+  padding: 3px 7px;
+   font-size: 1.9rem;
+font-family: 'DM Serif Display', serif;
+/* font-weight: 700; */
+letter-spacing: 3px;
+}
+
+.college{
+  /* display: flex; */
+/* align-items: center; */
+max-width: 2px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.nav-links a:hover {
+  border-bottom: #fff solid 2px;
+  background-color: rgb(140, 138, 138);
+}
+
+.nav-item {
+  position: relative;
+}
+.login-items{
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: gray;
+  display: none;
+  flex-direction: column;
+  min-width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+}
+.dropup{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: gray;
+  display: none;
+  flex-direction: column;
+  min-width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+}
+
+.nav-item:hover .dropdown {
+  display: flex;
+}
+
+.login-items:hover .dropup{
+  display: flex;
+}
+
+.dropdown a {
+  padding: 0.8rem 1rem;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.dropup a{
+   padding: 0.8rem 1rem;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.dropdown a:hover {
+  background-color: #767778;
+  /* color: #ffcc00; */
+  /* border-bottom: #fff solid 2px; */
+}
+
+
+
+body, html {
+  height: 100%;
+  font-family:  sans-serif;
+  /* background-color: #959697; */
+}
+
+/* courses-a */
+.courses-name ul{
+justify-content: space-between;
+align-items: center;
+display: flex;
+   }
+
+   .courses-name ul li{
+list-style-type: none;
+   }
+
+   .courses-name a{
+    text-decoration: none;
+    color: rgb(44, 42, 42);
+    font-size: 1.2em;
+   }
+
+   .round{
+   background-color: rgb(250, 248, 248);
+   display: none;
+   }
+
+   
+
+
+
+
+
+/* zoom */
+.gallery {
+  text-align: center;
+  margin-top: 50px;
+  justify-content: center;
+  display: flex;
+  gap: 5em;
+  max-width: 100%;
+  flex-wrap: wrap;
+   position: relative;
+  /* top: 3em; */
+  top: 4em;
+}
+
+.galla{
+   text-align: center;
+  margin-top: 50px;
+  justify-content: center;
+  display: flex;
+  gap: 6em;
+  max-width: 100%;
+  flex-wrap: wrap;
+  top: 8em;
+  position: relative;
+}
+
+.thumbnail {
+  width: 300px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#se{
+  width: 35%;
+}
+
+#da{
+  width: 35%;
+}
+
+#se2{
+  width: 28%;
+}
+
+#da2{
+  width: 28%;
+}
+
+.software{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  position: relative;
+  /* top: 3em; */
+  top: 5em;
+}
+.software h3{
+   font-size: 2em;
+}
+
+.database{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  position: relative;
+  /* top: 3em; */
+  top: 10em;
+
+}
+
+
+.database h3{
+  font-size: 2em;
+}
+
+
+.cta a{
+  color: red;
+  /* background-color: white; */
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.cta{
+  padding: 0.5em 3em;
+  border-radius: 10px;
+  border-color: white;
+}
+
+.cta:hover{
+  box-shadow: 3px 3px 10px rgba(12, 12, 12, 0.3);
+}
+
+
+/* footer */
+.footer-container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7em;
+  margin-top: 5em;
+  background-color: gray;
+  padding: 2em 3em;
+  flex-wrap: wrap;
+  margin-top: 13em;
+}
+.footer-container h5{
+  color: white;
+  font-size: 1.3em;
+}
+
+
+.loca{
+  color: black;
+}
+
+.loca p{
+ gap: 3em;
+}
+
+
+.quick-links a{
+display: flex;
+  text-decoration: none;
+  color: black;
+  font-size: 1em;
+}
+
+ .programmes a:hover{
+  color: white;
+}
+
+.quick-links a:hover{
+   color: white;
+}
+
+.programmes a{
+  display: flex;
+  text-decoration: none;
+  color: black;
+}
+
+#copyright{
+  text-align: center;
+  background-color: gray;
+}
+
+
+
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 80%;
+    display: none;
+    background-color: gray;
+    position: absolute;
+    top: 110px;
+    right: 0;
+    padding: 1rem 1rem;
+    z-index: 100;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-item:hover .dropdown {
+    position: static;
+  }
+
+  .dropdown {
+    position: static;
+    box-shadow: none;
+  }
+
+
+.database h3{
+font-size: 0.7em;
+  }
+
+
+  .software h3{
+font-size: 0.7em;
+  }
+
+  .cta a{
+  color: red;
+  /* background-color: white; */
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: bold;
+}
+.cta{
+  padding: 0.3em 2em;
+  border-radius: 10px;
+  border-color: white;
+}
+}

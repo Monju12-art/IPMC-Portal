@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/courses.css') }}"
+    />
+   <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+      type="image/png"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <img
+        src="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+        alt="IPMC Logo"
+        width="120px"
+      />
+      <div class="logo">
+        <span class="ipmc">IPMC</span>
+        <span class="college">UNIVERSITY COLLEGE </span>
+      </div>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <div class="nav-links" id="nav-links">
+        <a href="{{ url_for('index') }}"> Home</a>
+
+        <a href="#">Our Story</a>
+
+        <div class="nav-item">
+          <a href="{{ url_for ('courses')}}"> Courses▾ </a>
+          <div class="dropdown">
+            <a href="#software">Software Engineering</a>
+            <a href="#">System Engineering</a>
+            <a href="#">Graphic Design</a>
+            <a href="#database">Database Management</a>
+          </div>
+        </div>
+        
+     
+        <a href="{{ url_for 
+        ('register') }}">Register</a>
+      </div>
+    </nav>
+
+    <!-- software engineering -->
+    <marquee behavior="" direction="" class="round">
+      <section class="courses-name">
+        <ul>
+          <li><a href="#"> software engineering</a></li>
+          <li><a href="#"> System Engineering</a></li>
+          <li><a href="#"> Graphic Design</a></li>
+          <li><a href="#">Database Management</a></li>
+        </ul>
+      </section>
+    </marquee>
+
+    <!-- pics -->
+    <div class="software">
+      <h3 id="software">Software Engineering</h3>
+      <button class="cta"><a href=" {{ url_for ('register')}}">Register</a></button>
+    </div>
+
+    <div class="gallery">
+      <img
+        src="{{ url_for('static', filename='images/advanced-s.e 549.png') }}"
+        alt="courses"
+        class="thumbnail"
+        tabindex="0"
+        id="se"
+      />
+
+      <img
+        src="{{ url_for('static', filename='images/Group 93.png') }}"
+        alt="courses"
+        class="thumbnail"
+        tabindex="0"
+        id="se2"
+      />
+    </div>
+
+    <div class="database">
+      <h3 id="database">Database Management</h3>
+      <button class="cta"><a href="#">Register</a></button>
+    </div>
+    <div class="galla">
+      <img
+        src="{{ url_for('static', filename='images/Group 95.png') }}"
+        alt="courses"
+        class="thumbnail"
+        tabindex="0"
+        id="da"
+      />
+
+      <img
+        src="{{url_for('static', filename='images/Group 116.png') }}"
+        alt="courses"
+        class="thumbnail"
+        tabindex="0"
+        id="da2"
+      />
+    </div>
+
+
+
+    <div class="database">
+      <h3 id="system">System Engineering</h3>
+      <button class="cta"><a href="#">Register</a></button>
+    </div>
+    <div class="galla">
+      <img
+        src="{{ url_for('static', filename='images/Group 3.png') }}"
+        alt="courses"
+        class="thumbnail"
+        tabindex="0"
+        id="da"
+      />
+
+      <img
+        src="{{url_for('static', filename='images/Group 116.png') }}"
+        alt="courses"
+        class="thumbnail"
+        tabindex="0"
+        id="da2"
+      />
+    </div>
+
+
+
+    <div class="database">
+      <h3 id="graphic">Graphic Design</h3>
+      <button class="cta"><a href="#">Register</a></button>
+    </div>
+    <div class="galla">
+      <img
+        src="{{ url_for('static', filename='images/Group 13 (1).png') }}"
+        alt="courses"
+        class="thumbnail"
+        tabindex="0"
+        id="da"
+      />
+
+      <img
+        src="{{url_for('static', filename='images/Group 116.png') }}"
+        alt="courses"
+        class="thumbnail"
+        tabindex="0"
+        id="da2"
+      />
+    </div>
+
+    
+
+    <div class="modal" id="modal">
+      <span class="close" id="closeBtn">&times;</span>
+      <img class="modal-content" id="modalImg" alt="courses" />
+    </div>
+
+    <div></div>
+
+ <footer>
+      <div class="footer-container">
+        <div class="office">
+          <h5>Our Office</h5>
+          <div class="loca">
+            <p>
+              <i class="fa-solid fa-location-dot"></i> IPMC Technology center,
+              Kasoa Ghana.
+            </p>
+            <p><i class="fa-solid fa-phone-volume"></i> +233 (0) 245-164-677</p>
+             <p><i class="fa-solid fa-phone-volume"></i> +233 (0) 545-124-611</p>
+            <p><i class="fa-solid fa-envelope"></i> training@ipmcghana.com</p>
+          </div>
+        </div>
+
+
+      </div>
+      <p id="copyright">Copyright © 2023 IPMC Kasoa, All Right Reserved.</p>
+    </footer>
+
+
+
+    <script src="{{ url_for ('static', filename= 'courses.js')}}"></script>
+  </body>
+</html>

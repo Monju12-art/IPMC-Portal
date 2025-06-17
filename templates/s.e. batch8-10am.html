@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/s.e. batch8-10am.css')}}" >
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+      type="image/png"
+    />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav>
+     <img src="{{ url_for('static', filename='images/IPMC University College Logo.png') }}" alt="" width="120px" />
+
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <div class="nav-links" id="nav-links">
+        <a href="{{ url_for('index') }}">Home</a>
+
+      <a href="{{ url_for('exams_timetable') }}">Exams Time Table</a>
+       
+        <a href="{{ url_for('submit_project') }}">Submit Project</a>
+
+      </div>
+    </nav>
+
+     <button onclick="window.location.href='{{ url_for('dashboard') }}'" id="backBtn" class="nav-btn">&#8592;</button>
+
+    <table>
+      <caption> SOFTWARE ENGINEERING, Batch 8-10am
+        (2nd Sem)
+      </caption>
+      <thead>
+        <tr>
+          <th>MODULE</th>
+          <th>BOOK <br> <span>(Click to download from library)</span></th>
+          <th>PROJECT</th>
+          <th>SUBMIT</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>PYTHON</td>
+          <td>
+            <a href="{{url_for('library_software')}}"><img
+              src="{{url_for('static',filename='images/python-book pic.webp')}}"
+              alt=""
+              width="30px"
+            /> </a>
+            
+          </td>
+          <td>
+            Build a frontend and backend project in python <br />using Django
+            and React <span> Deadline: May 23,2025</span>
+          </td>
+          <td class="arrow">&#8594;</td>
+        </tr>
+        <!-- for Php -->
+        <tr>
+          <td>PHP</td>
+           <td>
+            <a href="{{url_for('library_software')}}"><img src="{{url_for('static', filename= 'images/php-book.jpeg')}}" alt="" width="30px" /></a></td>
+          <td>
+            Build a frontend and backend project in python <br />using Django
+            and React <span> Deadline: June 20,2025</span>
+          </td>
+           <td class="arrow">&#8594;</td>
+        </tr>
+
+        <!-- for mysql -->
+         <tr> 
+        <td>MySQL</td>
+         <td>
+            <a href="{{url_for('library_software')}}"><img src="{{url_for('static', filename= 'images/mysql.jpeg')}}" alt="" width="30px" /></a></td>
+          <td>
+          Build a frontend and backend project in python <br />using Django and
+          React <span> Deadline: May 23,2025</span>
+        </td>
+         <td class="arrow">&#8594;</td>
+        </tr>
+
+          <!-- for Java -->
+        <tr>
+          <td>JAVA</td>
+          <td>
+            <a href="{{url_for('library_software')}}"><img src="{{url_for('static', filename= 'images/java-book.jpg')}}" alt="" width="30px" /></a></td>
+          <td>
+            Build a frontend and backend project in python <br />using Django
+            and React <span> Deadline: June 20,2025</span>
+          </td>
+           <td class="arrow">&#8594;</td>
+        </tr>
+
+
+          <tr>
+          <td>C#</td>
+          <td>
+            <a href="{{url_for('library_software')}}">
+  <img src="{{ url_for('static',filename='images/cy-book.jpg') }}" alt="jed" width="30px" />
+</a></td>
+          <td>
+            Build a frontend and backend project in python <br />using Django
+            and React <span> Deadline: June 20,2025</span>
+          </td>
+         <td class="arrow">&#8594;</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </body>
+</html>

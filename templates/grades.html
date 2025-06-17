@@ -1,0 +1,48 @@
+
+<link rel="stylesheet" href="{{url_for('static', filename= 'css/s.e. batch8-10am.css')}}" >
+
+ <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+      type="image/png"
+    />
+
+<nav>
+     <img
+    src="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+    alt=""
+    width="120px"
+  />
+
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <div class="nav-links" id="nav-links">
+      <a href="{{ url_for('index') }}">Home</a>
+          
+           
+       <a href="{{ url_for('exams_timetable') }}">Exams Time Table</a>
+       
+      </div>
+    </nav>
+
+    
+
+<button onclick="window.location.href='{{ url_for('dashboard') }}'" id="backBtn" class="nav-btn">&#8592;</button>
+
+<table>
+  <caption>My Grades - Semester 1</caption>
+  <thead>
+    <tr>
+      <th>Module</th>
+      <th>Grade</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    {% for module, grade, course in grades %}
+    <tr>
+      <td>{{ module }}</td>
+      <td>{{ grade }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

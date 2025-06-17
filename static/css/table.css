@@ -1,0 +1,224 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+nav {
+  background-color:gray;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0rem;
+  position: relative;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  /* display: none; */
+  z-index: 200;
+}
+
+
+
+/* go back */
+.nav-btn {
+    /* color: rgb(250, 245, 245); */
+    top: 95px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    font-size: 2rem;
+    /* background-color: #eae8e8; */
+    z-index: 1000;   /* Ensures it's on top of other elements */
+    position: fixed; /* Positions the button relative to the viewport */
+           
+    left: 15px;      /* 15px from the left */
+  }
+  
+  .nav-btn:hover {
+    /* border-radius: 50%; */
+    color: darkred;
+     /* background-color: #1c242c; */
+  }
+
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.nav-links a:hover {
+  border-bottom: #fff solid 2px;
+  background-color: rgb(140, 138, 138);
+}
+
+.nav-item {
+  position: relative;
+}
+.login-items{
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: gray;
+  display: none;
+  flex-direction: column;
+  min-width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+}
+.dropup{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: gray;
+  display: none;
+  flex-direction: column;
+  min-width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+}
+
+.nav-item:hover .dropdown {
+  display: flex;
+}
+
+.login-items:hover .dropup{
+  display: flex;
+}
+
+.dropdown a {
+  padding: 0.8rem 1rem;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.dropup a{
+   padding: 0.8rem 1rem;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.dropdown a:hover {
+  background-color: #767778;
+  /* color: #ffcc00; */
+  /* border-bottom: #fff solid 2px; */
+}
+
+
+
+
+
+
+/* table */
+table {
+  width: 90%;
+  margin: 2em auto;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  font-family: 'Poppins', Arial, sans-serif;
+  
+}
+
+caption {
+  caption-side: top;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  color: #000;
+}
+
+th, td {
+  padding: 1em 1.2em;
+  text-align: center;
+  border: 1px solid rgb(71, 70, 70);
+}
+
+th {
+  /* background: #1c242c; */
+  background-color: darkred;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+tr:nth-child(even) {
+  background: #f6f8fa;
+}
+
+tr:hover {
+  background: #e3f0ff;
+  transition: background 0.2s;
+}
+
+td img {
+  vertical-align: middle;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  width: 80px;
+}
+
+
+
+td span {
+  color: #b30000;
+  font-weight: 500;
+  font-size: 0.95em;
+}
+
+th span{
+    font-weight: lighter;
+}
+
+/* arrows */
+.arrow {
+  font-size: 2em;
+  color: darkred;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.arrow:hover {
+  transform: translateX(5px) scale(1.2);
+  color: #b30000;
+}
+
+@media (max-width: 700px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  th, td {
+    padding: 0.7em 0.5em;
+  }
+  th {
+    background: #1c242c;
+    color: #fff;
+    position: sticky;
+    top: 0;
+  }
+}

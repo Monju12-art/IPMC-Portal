@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}">
+
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+      type="image/png"
+    />
+  </head>
+
+
+
+  <body>
+    <!-- Navbar -->
+    <nav>
+     <img
+    src="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+    alt=""
+    width="120px"
+/>
+
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <div class="nav-links" id="nav-links">
+        <a href="/index.html">Home</a>
+
+         <a href="{{ url_for('exams_timetable') }}">Exams Time Table</a>
+       
+
+      </div>
+    </nav>
+
+    <button onclick="window.location.href='{{ url_for('dashboard') }}'" id="backBtn" class="nav-btn">&#8592;</button>
+
+    <table>
+      <caption> SYSTEM ENGINEERING
+        (2nd Sem)
+      </caption>
+      <thead>
+        <tr>
+          <th>MODULE</th>
+          <th>BOOK <br> <span>(Click to download from library)</span></th>
+          <th>PROJECT</th>
+          <th>SUBMIT</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> CompTIA A+</td>
+          <td>
+           <a href="{{ url_for('library_system') }}">
+  <img
+    src="{{ url_for('static', filename='images/comptia a.png') }}"
+    alt=""
+    width=""
+  />
+</a>
+            
+          </td>
+          <td>
+            Build a frontend and backend project in python <br />using Django
+            and React <span> Deadline: May 23,2025</span>
+          </td>
+          <td class="arrow">&#8594;</td>
+        </tr>
+        <!-- for Php -->
+        <tr>
+          <td>CompTIA N+</td>
+           <td>
+            <a href="{{url_for('library_system')}}"><img src="{{url_for('static', filename= 'images/n+.jpeg')}}" alt="" width="" /></a></td>
+          <td>
+            Build a frontend and backend project in python <br />using Django
+            and React <span> Deadline: June 20,2025</span>
+          </td>
+           <td class="arrow">&#8594;</td>
+        </tr>
+
+        <!-- for mysql -->
+         <tr> 
+        <td> Linux Redhat Administration</td>
+         <td>
+            <a href="{{ url_for('library_system')}}"><img src="{{url_for('static', filename= 'images/red-hat.jpeg')}}" alt="" width="" /></a></td>
+          <td>
+          Build a frontend and backend project in python <br />using Django and
+          React <span> Deadline: May 23,2025</span>
+        </td>
+         <td class="arrow">&#8594;</td>
+        </tr>
+
+          <!-- for Java -->
+        <tr>
+          <td>Introduction to System Engineering</td>
+          <td>
+            <a href="{{url_for('library_system')}}"><img src="{{url_for('static', filename= 'images/system 2.webp')}}" alt="" width="" /></a></td>
+          <td>
+            Build a frontend and backend project in python <br />using Django
+            and React <span> Deadline: June 20,2025</span>
+          </td>
+           <td class="arrow">&#8594;</td>
+        </tr>
+
+
+          <tr>
+          <td>System Architecture</td>
+          <td>
+            <a href="{{url_for('library_system')}}"><img src="{{url_for('static',filename= 'images/system 5.jpg')}}" alt="" width="" /></a></td>
+          <td>
+            Build a frontend and backend project in python <br />using Django
+            and React <span> Deadline: June 20,2025</span>
+          </td>
+         <td class="arrow">&#8594;</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </body>
+</html>

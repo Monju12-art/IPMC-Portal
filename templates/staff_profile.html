@@ -1,0 +1,30 @@
+<!-- filepath: c:\Users\user\Desktop\Projects\SCHOOL PORTAL\Student-Portal\templates\staff_profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Staff Profile</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/student_dashboard.css') }}">
+
+  <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/IPMC University College Logo.png') }}"
+      type="image/png"
+    />
+</head>
+<body>
+  <div class="him">
+    <section class="head-dashboard">
+      <img src="{{ url_for('static', filename='images/' ~ staff.profile_pic) }}"
+     alt="Profile"
+     class="profile-pic"
+     onerror="this.onerror=null;this.src='{{ url_for('static', filename='images/default_staff.png') }}';">
+      <h2>{{ staff.name }}</h2>
+      <p>Staff ID: {{ staff.staff_id }}</p>
+      <p>Email: {{ staff.email }}</p>
+      <p>Role: {{ staff.role }}</p>
+    </section>
+    <a href="{{ url_for('staff_dashboard') }}" class="logout-btn">Back to Dashboard</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+3. Add to Cart Functionality
+When a user clicks "Add to Cart", JavaScript retrieves:
+
+The product name, price, image, and selected size.
+
+It then stores this information in localStorage, so the cart remembers items even if the page is refreshed.
+
+
+
+
+
+Increase the font-size for the second header.
+
+
+
+Show us how it is done.
+
+#python tips
+ 4. Security Tips
+Never directly insert user input into HTML (protect against XSS attacks).
+
+Always validate and sanitize data in Python before displaying it.
+
